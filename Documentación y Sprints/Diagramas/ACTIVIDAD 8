@@ -1,0 +1,362 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Página-1" id="xdG3sH1lI5qossQuFCMt">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-180" edge="1" parent="1" source="XB_29nZPFAV6b_qTpiMO-182" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.464;entryY=-0.008;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=diamond;endFill=0;" target="XB_29nZPFAV6b_qTpiMO-199">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint x="-407" y="950" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-181" edge="1" parent="1" source="XB_29nZPFAV6b_qTpiMO-182" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.475;entryY=-0.011;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=diamond;endFill=0;" target="XB_29nZPFAV6b_qTpiMO-185">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-660" y="940" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-182" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Pantalla de Inicio" vertex="1">
+          <mxGeometry height="170" width="186" x="-500" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-183" parent="XB_29nZPFAV6b_qTpiMO-182" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;botón:&amp;nbsp; log in&lt;/div&gt;&lt;div&gt;botón: register&lt;/div&gt;&lt;div&gt;botón: menú principal&lt;/div&gt;&lt;div&gt;Titulo: Telurio&lt;/div&gt;&lt;div&gt;Fondo:JPG&lt;/div&gt;&lt;div&gt;Logo: SVG&lt;/div&gt;&lt;div&gt;Botones: PNG&lt;/div&gt;&lt;div&gt;Música: cortina de audio&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="180" x="-1" y="41" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-184" edge="1" parent="1" source="XB_29nZPFAV6b_qTpiMO-185" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="XB_29nZPFAV6b_qTpiMO-208">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-185" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" value="Inicio de sesión" vertex="1">
+          <mxGeometry height="230" width="220" x="-760" y="960" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-186" parent="XB_29nZPFAV6b_qTpiMO-185" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="entrada de texto: correo electronico (Ej, solanacastiglionedante@gmail.com)" vertex="1">
+          <mxGeometry height="30" width="156.25" x="31.88" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-188" parent="XB_29nZPFAV6b_qTpiMO-185" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="entrada de texto: nombre del usuario (Ej. Dante)" vertex="1">
+          <mxGeometry height="30" width="140" x="40" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-189" parent="XB_29nZPFAV6b_qTpiMO-185" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;span style=&quot;text-align: left; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;entrada de texto: contraseña (Ej, tortuga.maritima.wrap)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;text-align: left; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;botón: autenticar&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="193.75" x="22.5" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-190" parent="XB_29nZPFAV6b_qTpiMO-185" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Fondo: JPG&lt;div&gt;Botones: PNG&lt;/div&gt;&lt;div&gt;Musica: cortina de audio&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="150" x="35.01" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="979h-u45eFpYralFnfQ2-5" edge="1" parent="1" source="XB_29nZPFAV6b_qTpiMO-191" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" target="XB_29nZPFAV6b_qTpiMO-248" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-191" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Configuración" vertex="1">
+          <mxGeometry height="230" width="230" x="-500" y="1630" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-194" parent="XB_29nZPFAV6b_qTpiMO-191" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;Switch: &quot;Blanco&quot; / &quot;Negro&quot;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="140" x="40" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-195" parent="XB_29nZPFAV6b_qTpiMO-191" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Botonavatar: &quot;Avatar&quot;" vertex="1">
+          <mxGeometry height="30" width="120" x="50" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-197" parent="XB_29nZPFAV6b_qTpiMO-191" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Barra de sonido: &quot;0% , 1%, 2%, 3% ... 100%" vertex="1">
+          <mxGeometry height="30" width="222" x="4" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-198" parent="XB_29nZPFAV6b_qTpiMO-191" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 13px;&quot;&gt;BotonMenu: &quot;Atras&quot;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="135" x="41.5" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="Mwg-UpOMgUBLt6coGLya-5" parent="XB_29nZPFAV6b_qTpiMO-191" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Fondo: JPG&amp;nbsp;&lt;div&gt;Logo: SVG&lt;/div&gt;&lt;div&gt;&lt;div&gt;Botones: PNG&lt;/div&gt;&lt;div&gt;Musica: cortina de audio&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="140" x="45" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="979h-u45eFpYralFnfQ2-8" edge="1" parent="1" source="XB_29nZPFAV6b_qTpiMO-199" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" target="XB_29nZPFAV6b_qTpiMO-216">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="979h-u45eFpYralFnfQ2-9" edge="1" parent="1" source="XB_29nZPFAV6b_qTpiMO-199" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" target="XB_29nZPFAV6b_qTpiMO-208">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-434" y="1250" />
+              <mxPoint x="-583" y="1250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-199" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Regristro" vertex="1">
+          <mxGeometry height="230" width="247" x="-496" y="960" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-200" parent="XB_29nZPFAV6b_qTpiMO-199" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="botón: autenticar&lt;div&gt;Logo: SVG&lt;/div&gt;" vertex="1">
+          <mxGeometry height="15" width="194" x="76" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-201" parent="XB_29nZPFAV6b_qTpiMO-199" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="entrada de texto: nombre del usuario (Ej, Dante)" vertex="1">
+          <mxGeometry height="30" width="173" x="37" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-202" parent="XB_29nZPFAV6b_qTpiMO-199" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;texto de entrada: contraseña (Ej, tortuga.maritima.wrap)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="171.5" x="37" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-203" parent="XB_29nZPFAV6b_qTpiMO-199" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;span style=&quot;color: rgb(34, 34, 34); font-family: &amp;quot;Google Sans&amp;quot;, Roboto, RobotoDraft, Helvetica, Arial, sans-serif; font-variant-ligatures: no-contextual; text-align: start; background-color: rgb(255, 255, 255);&quot;&gt;gmail: &quot;dante.solanacastiglione.et20@gmail.com&quot;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="235.5" x="5.75" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-204" parent="XB_29nZPFAV6b_qTpiMO-199" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Fondo: JPG&lt;div&gt;Botones: PNG&lt;br&gt;&lt;div&gt;Música: cortina de audio&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="10" width="200" x="17" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-205" edge="1" parent="1" source="XB_29nZPFAV6b_qTpiMO-208" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;endArrow=diamond;endFill=0;" target="XB_29nZPFAV6b_qTpiMO-191">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-600" y="1580" />
+              <mxPoint x="-385" y="1580" />
+            </Array>
+            <mxPoint x="-640" y="1610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-206" edge="1" parent="1" source="XB_29nZPFAV6b_qTpiMO-208" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;endArrow=classic;endFill=1;startArrow=classic;startFill=1;edgeStyle=orthogonalEdgeStyle;curved=1;" target="XB_29nZPFAV6b_qTpiMO-224">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-207" edge="1" parent="1" source="XB_29nZPFAV6b_qTpiMO-208" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;" target="XB_29nZPFAV6b_qTpiMO-182">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-810" y="1330" />
+              <mxPoint x="-810" y="755" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-208" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Menú principal (Alumno)" vertex="1">
+          <mxGeometry height="200" width="230" x="-755" y="1280" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-209" parent="XB_29nZPFAV6b_qTpiMO-208" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="75" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-212" parent="XB_29nZPFAV6b_qTpiMO-208" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=15;" value="&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;indicadorEstado = &quot;Conectado&quot;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;botonConfig = &quot;Configuración&quot;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;botonAvatar = &quot;Avatar&quot;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;botonSalir = &quot;Cerrar Sesión&quot;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;botonClase = &quot; Nueva Clase&quot;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;BotónServicio = &quot;Ayuda&quot;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;BotonCurso = &quot;Biología&quot; (Dependera del titulo que otorgue el profesor)&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;Fondo: JPG&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;Logo: SVG&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;Botones: PNG&lt;/div&gt;" vertex="1">
+          <mxGeometry height="160" width="225" x="5" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-213" edge="1" parent="1" source="XB_29nZPFAV6b_qTpiMO-216" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;startArrow=classic;startFill=1;endArrow=diamond;endFill=0;" target="XB_29nZPFAV6b_qTpiMO-191">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-214" edge="1" parent="1" source="Mwg-UpOMgUBLt6coGLya-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;" target="XB_29nZPFAV6b_qTpiMO-182">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-220" y="1352" />
+              <mxPoint x="-220" y="755" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-215" edge="1" parent="1" source="XB_29nZPFAV6b_qTpiMO-216" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;startArrow=classic;startFill=1;endArrow=diamond;endFill=0;" target="XB_29nZPFAV6b_qTpiMO-241">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-307" y="1420.5" as="sourcePoint" />
+            <mxPoint x="-119.99999999999955" y="1669.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-216" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Menu principal (Profesor)" vertex="1">
+          <mxGeometry height="205" width="217" x="-507" y="1280" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-221" edge="1" parent="1" source="XB_29nZPFAV6b_qTpiMO-185" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=classic;endFill=1;startArrow=classic;startFill=1;" target="XB_29nZPFAV6b_qTpiMO-216">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-595" y="1235" />
+              <mxPoint x="-399" y="1235" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-222" edge="1" parent="1" source="XB_29nZPFAV6b_qTpiMO-185" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=diamond;endFill=0;startArrow=classic;startFill=1;" target="XB_29nZPFAV6b_qTpiMO-208">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-223" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="270" width="200" x="-710" y="1600" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-224" parent="XB_29nZPFAV6b_qTpiMO-223" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" value="Curso" vertex="1">
+          <mxGeometry height="240" width="200" x="-20" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-226" parent="XB_29nZPFAV6b_qTpiMO-224" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;BotonJuegos = &quot;Iniciar Juego semanal&quot;&amp;nbsp;&lt;br&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;&lt;font style=&quot;&quot;&gt;rankingAlu = TabladePunto&lt;/font&gt;s&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="200" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-227" parent="XB_29nZPFAV6b_qTpiMO-224" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=15;" value="&lt;div&gt;&lt;span style=&quot;font-size: 11px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;BotonCronograma = &quot;Ver Cronograma&quot;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Boton: &quot;Atras&quot;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="200" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="Mwg-UpOMgUBLt6coGLya-6" parent="XB_29nZPFAV6b_qTpiMO-224" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;Fondo: JPG&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;Logo: SVG&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;Botones: PNG&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;Musica: cortina de audio&lt;/div&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="140" x="30" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-229" edge="1" parent="1" source="XB_29nZPFAV6b_qTpiMO-231" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.447;entryY=-0.014;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=classic;endFill=1;startArrow=classic;startFill=1;" target="XB_29nZPFAV6b_qTpiMO-238">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-1200" y="1550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-230" edge="1" parent="1" source="XB_29nZPFAV6b_qTpiMO-231" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.45;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=classic;endFill=1;startArrow=classic;startFill=1;" target="XB_29nZPFAV6b_qTpiMO-245">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-930" y="1550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="979h-u45eFpYralFnfQ2-6" edge="1" parent="1" source="XB_29nZPFAV6b_qTpiMO-231" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=diamond;startFill=0;" target="XB_29nZPFAV6b_qTpiMO-208">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-231" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Solicitar ayuda" vertex="1">
+          <mxGeometry height="200" width="200" x="-1180" y="1280" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-232" parent="XB_29nZPFAV6b_qTpiMO-231" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="BotonPreguntas = &quot;Preguntas Frecuentes" vertex="1">
+          <mxGeometry height="30" width="160" x="20" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="979h-u45eFpYralFnfQ2-1" parent="XB_29nZPFAV6b_qTpiMO-231" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="BotonST = &quot;Servicio Tecnico&quot;&lt;div&gt;Boton: &quot;Atras&quot;&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;div&gt;Fondo: JPG&amp;nbsp;&lt;div&gt;Logo: SVG&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;Botones: PNG&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="75" width="120" x="40" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-233" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="-530" y="1130" as="geometry" />
+        </mxCell>
+        <mxCell id="979h-u45eFpYralFnfQ2-10" edge="1" parent="1" source="XB_29nZPFAV6b_qTpiMO-234" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=diamond;endFill=0;" target="XB_29nZPFAV6b_qTpiMO-260">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="979h-u45eFpYralFnfQ2-14" edge="1" parent="1" source="XB_29nZPFAV6b_qTpiMO-234" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=diamond;endFill=0;startArrow=classic;startFill=1;" target="XB_29nZPFAV6b_qTpiMO-264">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-230" y="2030" />
+              <mxPoint x="-230" y="2300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-234" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Curso" vertex="1">
+          <mxGeometry height="240" width="230" x="-210" y="1910" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-237" parent="XB_29nZPFAV6b_qTpiMO-234" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=12;fontFamily=Helvetica;fontColor=default;fontStyle=0;" value="&lt;div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;BotonCronogramaIndividual&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;= &quot;Cronograma&quot;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;BotonTabladeAlu = &quot;Personas&quot;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;BotonRanking = &quot;Posiciones&quot;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Fondo: JPG&amp;nbsp;&lt;/span&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;Logo: SVG&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;div&gt;Botones: PNG&lt;/div&gt;&lt;div&gt;Musica: cortina de audio&lt;/div&gt;&lt;/div&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="190" width="205" x="12.5" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-238" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Preguntas casuales" vertex="1">
+          <mxGeometry height="240" width="210" x="-1280" y="1620" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-239" parent="XB_29nZPFAV6b_qTpiMO-238" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Preguntas Frecuentes: Insertar preguntas frecuentes&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;Boton: &quot;Atras&quot;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;div&gt;Fondo: JPG&amp;nbsp;&lt;div&gt;Logo: SVG&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;Botones: PNG&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="210" y="65" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-240" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="300" width="200" x="-210" y="1580" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-241" parent="XB_29nZPFAV6b_qTpiMO-240" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" value="Clases" vertex="1">
+          <mxGeometry height="290" width="200" x="-20" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-243" parent="XB_29nZPFAV6b_qTpiMO-241" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=12;" value="BotonCurso = &quot;Biologia&quot; (Dependera del Titulo que otorgue el Profesor)" vertex="1">
+          <mxGeometry height="72.30000000000001" width="155" x="22.5" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-244" parent="XB_29nZPFAV6b_qTpiMO-241" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 13px;&quot;&gt;BotonModificación de Cronograma = &quot;Modificar Cronograma&quot;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;BotonEliminarClase = &quot;Eliminar Clase&quot;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;BotonMenu = &quot;Menu principal&quot;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;BotonCrearC =&amp;nbsp; &quot;Crear Clase&quot;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;Boton: &quot;Habilitar Juego Semanal&quot;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="200" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Mwg-UpOMgUBLt6coGLya-7" parent="XB_29nZPFAV6b_qTpiMO-241" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Fondo: JPG&amp;nbsp;&lt;div&gt;Logo: SVG&lt;/div&gt;&lt;div&gt;Botones: PNG&lt;/div&gt;&lt;div&gt;Musica: cortina de audio&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="160" x="22.5" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-245" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Servicio técnico" vertex="1">
+          <mxGeometry height="238" width="200" x="-1010" y="1622" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-246" parent="XB_29nZPFAV6b_qTpiMO-245" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;Texto: String &quot;Hola Bienvenido al Servicio Técnico de Telurio en breve te ponemos en contacto con el personal.&amp;nbsp;&lt;/div&gt;&lt;div&gt;Cualquier tipo de duda dejamos el siguiente mail:&amp;nbsp;&lt;/div&gt;&lt;div&gt;[INSERTAR MAIL]&quot;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;Boton: &quot;Atras&quot;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Fondo: JPG&amp;nbsp;&lt;div&gt;Logo: SVG&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="180" width="200" y="43" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-247" edge="1" parent="1" source="XB_29nZPFAV6b_qTpiMO-248" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=diamond;endFill=0;" target="XB_29nZPFAV6b_qTpiMO-264">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-248" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Avatar&amp;nbsp;" vertex="1">
+          <mxGeometry height="240" width="240" x="-485" y="1910" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-250" parent="XB_29nZPFAV6b_qTpiMO-248" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=15;" value="&lt;div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;Botondeperfil = JPG&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 13px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;BotonLogros = &quot;Ver Logros&quot;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;BotonProgreso = &quot;Progreso&quot;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;BotonRanking &quot;Tu posición&quot;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="210" x="20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Mwg-UpOMgUBLt6coGLya-8" parent="XB_29nZPFAV6b_qTpiMO-248" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fontStyle=0;" value="Fondo: JPG&amp;nbsp;&lt;div&gt;Logo: SVG&lt;/div&gt;&lt;div&gt;Foto Avatar: PNG&lt;/div&gt;&lt;div&gt;&lt;div&gt;Botones: PNG&lt;/div&gt;&lt;div&gt;Musica: cortina de audio&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="160" x="35" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-255" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.45;entryY=-0.006;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-120" y="1890" />
+              <mxPoint x="-96" y="1890" />
+            </Array>
+            <mxPoint x="-120" y="1881.44" as="sourcePoint" />
+            <mxPoint x="-96.5" y="1910" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-256" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=diamond;endFill=0;" target="XB_29nZPFAV6b_qTpiMO-261">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-110" y="2150" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-257" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Cronograma" vertex="1">
+          <mxGeometry height="240" width="200" x="70" y="1900" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-259" parent="XB_29nZPFAV6b_qTpiMO-257" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="200" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-260" parent="XB_29nZPFAV6b_qTpiMO-257" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=15;fontFamily=Helvetica;fontColor=default;fontStyle=0;" value="&lt;span style=&quot;font-size: 13px;&quot;&gt;BotonOrdenarcronograma&amp;nbsp;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;= &quot;Ordenar&quot;&lt;br&gt;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;BotonAgregarjuego&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;a cronograma =&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;&quot;Agregar Juego&quot;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Fondo: JPG&amp;nbsp;&lt;/span&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;Logo: SVG&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;div&gt;Botones: PNG&lt;/div&gt;&lt;div&gt;Musica: cortina de audio&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="210" width="200" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-261" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Alumnos" vertex="1">
+          <mxGeometry height="260" width="200" x="-210" y="2200" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-268" parent="XB_29nZPFAV6b_qTpiMO-261" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="-Botón avatar alumno: &quot;ver información y logros del alumno&quot;&lt;div&gt;&lt;br&gt;&lt;div&gt;-Botón expulsar alumno: &quot;eliminar alumno de la clase&quot;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Fondo: JPG&lt;/div&gt;&lt;div&gt;Logo:SVG&lt;/div&gt;&lt;div&gt;Foto de alumno: PNG&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="180" x="10" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="979h-u45eFpYralFnfQ2-15" edge="1" parent="1" source="XB_29nZPFAV6b_qTpiMO-264" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" target="XB_29nZPFAV6b_qTpiMO-224">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-264" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Tabla de Logros" vertex="1">
+          <mxGeometry height="200" width="200" x="-472.5" y="2200" as="geometry" />
+        </mxCell>
+        <mxCell id="XB_29nZPFAV6b_qTpiMO-265" parent="XB_29nZPFAV6b_qTpiMO-264" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Botón de logros = &quot;Más detalles&quot;&lt;div&gt;Fondo: JPG&amp;nbsp;&lt;div&gt;Logo: SVG&lt;/div&gt;&lt;div&gt;&lt;div&gt;Botones: PNG&lt;/div&gt;&lt;div&gt;Musica: cortina de audio&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="114" width="175" x="15" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="Mwg-UpOMgUBLt6coGLya-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;indicadorEstado = &quot;Conectado&quot;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;botonConfig = &quot;Configuración&quot;&lt;/div&gt;&lt;div&gt;botonCuenta = &quot;Mi Cuenta&quot;&lt;/div&gt;&lt;div&gt;botonSalir = &quot;Cerrar Sesión&quot;&lt;/div&gt;&lt;div&gt;botonClase = &quot;Nueva Clase&quot;&lt;/div&gt;&lt;div&gt;BotonCrearClase: &quot;Crear Nueva Clase&quot;&lt;/div&gt;&lt;div&gt;Fondo: JPG&lt;/div&gt;&lt;div&gt;Logo: SVG&lt;/div&gt;&lt;div&gt;&lt;div&gt;Botones: PNG&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="170" width="210" x="-500" y="1310" as="geometry" />
+        </mxCell>
+        <mxCell id="wx_cLH_VeKijG9IBj2-l-12" edge="1" parent="1" source="wx_cLH_VeKijG9IBj2-l-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=diamond;endFill=0;" target="wx_cLH_VeKijG9IBj2-l-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx_cLH_VeKijG9IBj2-l-2" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=40;" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;Juego semanal: Crucigrama (nivel 1)&lt;/span&gt;" vertex="1">
+          <mxGeometry height="240" width="168.5" x="-714.25" y="2550" as="geometry" />
+        </mxCell>
+        <mxCell id="wx_cLH_VeKijG9IBj2-l-5" parent="wx_cLH_VeKijG9IBj2-l-2" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=15;" value="&lt;div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;Tablon Crucigrama: espacios para completar&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;Botón adelante: pasar a siguiente ronda&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;Musica = Cortina de Audio&lt;/span&gt;&lt;span style=&quot;font-size: 11px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Imagenes: JPG&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;Paginas: INT&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;Botones: PNG&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;Sonidos: pista de audio&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="140" width="138" x="16.25" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="wx_cLH_VeKijG9IBj2-l-1" edge="1" parent="1" source="XB_29nZPFAV6b_qTpiMO-224" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=diamond;endFill=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="wx_cLH_VeKijG9IBj2-l-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-630" y="2520" />
+            </Array>
+            <mxPoint x="-640" y="1830" as="sourcePoint" />
+            <mxPoint x="-610" y="2530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="979h-u45eFpYralFnfQ2-7" edge="1" parent="1" source="XB_29nZPFAV6b_qTpiMO-212" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" target="XB_29nZPFAV6b_qTpiMO-248">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-780" y="1390" />
+              <mxPoint x="-780" y="2030" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wx_cLH_VeKijG9IBj2-l-24" edge="1" parent="1" source="wx_cLH_VeKijG9IBj2-l-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=diamond;endFill=0;" target="wx_cLH_VeKijG9IBj2-l-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx_cLH_VeKijG9IBj2-l-10" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=40;" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;&amp;nbsp;Crucigrama (nivel 2)&lt;/span&gt;" vertex="1">
+          <mxGeometry height="240" width="168.5" x="-500" y="2550" as="geometry" />
+        </mxCell>
+        <mxCell id="wx_cLH_VeKijG9IBj2-l-11" parent="wx_cLH_VeKijG9IBj2-l-10" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=15;" value="&lt;div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;Tablon Crucigrama: espacios para completar&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;Botón adelante: pasar a siguiente ronda&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;Musica = Cortina de Audio&lt;/span&gt;&lt;span style=&quot;font-size: 11px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Imagenes: JPG&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;Paginas: INT&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;Botones: PNG&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;Sonidos: pista de audio&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="140" width="138" x="10" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="979h-u45eFpYralFnfQ2-12" edge="1" parent="1" source="wx_cLH_VeKijG9IBj2-l-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=diamond;endFill=0;" target="wx_cLH_VeKijG9IBj2-l-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx_cLH_VeKijG9IBj2-l-14" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=40;" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;&amp;nbsp;Crucigrama (nivel 3)&lt;/span&gt;" vertex="1">
+          <mxGeometry height="240" width="168.5" x="-300" y="2550" as="geometry" />
+        </mxCell>
+        <mxCell id="wx_cLH_VeKijG9IBj2-l-15" parent="wx_cLH_VeKijG9IBj2-l-14" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=15;" value="&lt;div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;Tablon Crucigrama: espacios para completar&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;Botón adelante: pasar a siguiente ronda&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;Musica = Cortina de Audio&lt;/span&gt;&lt;span style=&quot;font-size: 11px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Imagenes: JPG&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;Paginas: INT&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;Botones: PNG&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;Sonidos: pista de audio&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="140" width="138" x="10" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="wx_cLH_VeKijG9IBj2-l-23" edge="1" parent="1" source="wx_cLH_VeKijG9IBj2-l-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=diamond;endFill=0;" target="wx_cLH_VeKijG9IBj2-l-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wx_cLH_VeKijG9IBj2-l-17" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=40;" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;&amp;nbsp;Crucigrama (nivel 4)&lt;/span&gt;" vertex="1">
+          <mxGeometry height="240" width="168.5" x="-98.5" y="2550" as="geometry" />
+        </mxCell>
+        <mxCell id="wx_cLH_VeKijG9IBj2-l-18" parent="wx_cLH_VeKijG9IBj2-l-17" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=15;" value="&lt;div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;Tablon Crucigrama: espacios para completar&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;Botón adelante: pasar a siguiente ronda&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;Musica = Cortina de Audio&lt;/span&gt;&lt;span style=&quot;font-size: 11px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Imagenes: JPG&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;Paginas: INT&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;Botones: PNG&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;Sonidos: pista de audio&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="140" width="138" x="9.5" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="wx_cLH_VeKijG9IBj2-l-25" edge="1" parent="1" source="wx_cLH_VeKijG9IBj2-l-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="XB_29nZPFAV6b_qTpiMO-264">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="204" y="2860" />
+              <mxPoint x="-730" y="2860" />
+              <mxPoint x="-730" y="2300" />
+            </Array>
+            <mxPoint x="-670" y="1870" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wx_cLH_VeKijG9IBj2-l-19" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=40;" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;&amp;nbsp;Crucigrama (nivel 5)&lt;/span&gt;" vertex="1">
+          <mxGeometry height="240" width="168.5" x="120" y="2550" as="geometry" />
+        </mxCell>
+        <mxCell id="wx_cLH_VeKijG9IBj2-l-20" parent="wx_cLH_VeKijG9IBj2-l-19" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=15;" value="&lt;div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;Tablon Crucigrama: espacios para completar&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;Botón:&amp;nbsp; Partida completada&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;Musica = Cortina de Audio&lt;/span&gt;&lt;span style=&quot;font-size: 11px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Imagenes: JPG&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;Paginas: INT&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;Botones: PNG&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;Sonidos: pista de audio&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="140" width="138" x="10.5" y="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
