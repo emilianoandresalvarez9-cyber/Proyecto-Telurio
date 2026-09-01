@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Panel del alumno: progreso del bimestre y actividades pendientes.">
+  <title>Inicio · Telurio</title>
+
+  <link rel="icon" type="image/png" href="img/logo-telurio.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body class="cuerpo-app">
+
+  <!-- ============================ CABECERA ============================== -->
+  <header class="cabecera">
+    <button class="boton-menu" id="boton-menu" aria-label="Abrir menú"
+            aria-controls="menu-lateral" aria-expanded="false">☰</button>
+
+    <a class="marca-cabecera" href="inicio.html">
+      <img src="img/logo-telurio.png" alt="">
+      <span>Telurio</span>
+    </a>
+
+    <div class="cabecera-derecha">
+      <!-- Contador de la moneda del juego (lo refresca js/principal.js) -->
+      <div class="chip-atomos" title="Átomos acumulados">
+        <img src="img/logo-telurio.png" alt="">
+        <span class="etiqueta-atomos">Átomos acumulados:</span>
+        <strong id="valor-atomos">0</strong>
+      </div>
+
+      <div class="menu-usuario">
+        <button class="boton-usuario" id="boton-usuario"
+                aria-label="Menú del usuario" aria-expanded="false">
+          <img src="img/usuario-icono.png" alt="">
+        </button>
+        <div class="desplegable-usuario" id="desplegable-usuario">
+          <p class="nombre-usuario">Alumno</p>
+          <button type="button" id="boton-cerrar-sesion">Cerrar sesión</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Telón que oscurece el fondo cuando el menú móvil está abierto -->
+  <div class="telon-menu" id="telon-menu"></div>
+
+  <!-- ========================== MENÚ LATERAL ============================ -->
+  <aside class="menu-lateral" id="menu-lateral">
+    <nav aria-label="Secciones del sitio">
+      <a class="enlace-menu" href="inicio.html" aria-current="page">Inicio</a>
+      <a class="enlace-menu" href="anuncios.html">Anuncios</a>
+      <a class="enlace-menu" href="tabla.html">Tabla</a>
+      <a class="enlace-menu" href="foro.html">Foro</a>
+      <a class="enlace-menu" href="clase.html">Clase</a>
+      <a class="enlace-menu" href="tienda.html">Tienda</a>
+    </nav>
+    <div class="pie-menu">
+      <img src="img/libros-telurio.png" alt="">
+    </div>
+  </aside>
+
+  <!-- =========================== CONTENIDO ============================== -->
+  <main class="contenido">
+
+    <!-- Saludo + resumen del bimestre -->
+    <section class="cinta-seccion" aria-labelledby="saludo-alumno">
+      <div>
+        <h1 id="saludo-alumno">¡Hola!</h1>
+        <p>Este es tu progreso a lo largo del bimestre.</p>
+      </div>
+      <img class="mascota-cinta" src="img/einstein.png" alt="">
+    </section>
+
+    <section class="rejilla-progreso" aria-label="Progreso del bimestre">
+      <article class="tarjeta-metrica">
+        <h3>Clases hechas<br>totales</h3>
+        <span class="valor-metrica" id="valor-clases-hechas">0</span>
+      </article>
+
+      <article class="tarjeta-metrica">
+        <h3>Clases faltantes<br>totales del bimestre</h3>
+        <span class="valor-metrica" id="valor-clases-faltantes">0</span>
+      </article>
+    </section>
+
+    <!-- Actividades pendientes (las pinta js/inicio.js) -->
+    <section aria-labelledby="titulo-actividades">
+      <h2 id="titulo-actividades">Actividades pendientes</h2>
+      <div class="rejilla-actividades" id="rejilla-actividades"></div>
+    </section>
+
+  </main>
+
+  <script src="js/estado.js"></script>
+  <script src="js/datos.js"></script>
+  <script src="js/principal.js"></script>
+  <script src="js/inicio.js"></script>
+</body>
+</html>

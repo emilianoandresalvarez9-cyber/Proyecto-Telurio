@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tienda atómica: buffos y skins para tu aventura química.">
+  <title>Tienda Atómica · Telurio</title>
+
+  <link rel="icon" type="image/png" href="img/logo-telurio.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body class="cuerpo-app">
+
+  <!-- ============================ CABECERA ============================== -->
+  <header class="cabecera">
+    <button class="boton-menu" id="boton-menu" aria-label="Abrir menú"
+            aria-controls="menu-lateral" aria-expanded="false">☰</button>
+
+    <a class="marca-cabecera" href="inicio.html">
+      <img src="img/logo-telurio.png" alt="">
+      <span>Telurio</span>
+    </a>
+
+    <div class="cabecera-derecha">
+      <div class="chip-atomos" title="Átomos acumulados">
+        <img src="img/logo-telurio.png" alt="">
+        <span class="etiqueta-atomos">Átomos acumulados:</span>
+        <strong id="valor-atomos">0</strong>
+      </div>
+
+      <div class="menu-usuario">
+        <button class="boton-usuario" id="boton-usuario"
+                aria-label="Menú del usuario" aria-expanded="false">
+          <img src="img/usuario-icono.png" alt="">
+        </button>
+        <div class="desplegable-usuario" id="desplegable-usuario">
+          <p class="nombre-usuario">Alumno</p>
+          <button type="button" id="boton-cerrar-sesion">Cerrar sesión</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="telon-menu" id="telon-menu"></div>
+
+  <!-- ========================== MENÚ LATERAL ============================ -->
+  <aside class="menu-lateral" id="menu-lateral">
+    <nav aria-label="Secciones del sitio">
+      <a class="enlace-menu" href="inicio.html">Inicio</a>
+      <a class="enlace-menu" href="anuncios.html">Anuncios</a>
+      <a class="enlace-menu" href="tabla.html">Tabla</a>
+      <a class="enlace-menu" href="foro.html">Foro</a>
+      <a class="enlace-menu" href="clase.html">Clase</a>
+      <a class="enlace-menu" href="tienda.html" aria-current="page">Tienda</a>
+    </nav>
+    <div class="pie-menu">
+      <img src="img/libros-telurio.png" alt="">
+    </div>
+  </aside>
+
+  <!-- =========================== CONTENIDO ============================== -->
+  <main class="contenido">
+
+    <section class="cinta-seccion">
+      <div>
+        <h1>Tienda At⚛mica</h1>
+        <p>Canjeá tus átomos por buffos y skins.</p>
+      </div>
+      <!-- Botón para cargar puntos (abre un modal; lo conectará el back-end) -->
+      <button class="btn btn-claro" type="button" id="boton-cargador">
+        Cargador de puntos
+      </button>
+    </section>
+
+    <!-- ------------------------------ Buffos ---------------------------- -->
+    <div class="titulo-grupo-tienda">
+      <h2>Buffos</h2>
+    </div>
+    <p>Se activan automáticamente en tu próxima partida del crucigrama.</p>
+    <section class="rejilla-tienda" id="rejilla-buffos"
+             aria-label="Buffos disponibles"></section>
+
+    <!-- --------------------------- Customización ------------------------- -->
+    <div class="titulo-grupo-tienda">
+      <h2>Customización</h2>
+    </div>
+    <p>Skins de grandes personajes de la ciencia para tu mascota.</p>
+    <section class="rejilla-tienda" id="rejilla-skins"
+             aria-label="Skins disponibles"></section>
+
+  </main>
+
+  <!-- =============== MODAL: CARGADOR DE PUNTOS =========================
+       TODO BACKEND: acá se conectará la pasarela / carga de códigos. -->
+  <dialog class="modal" id="modal-cargador">
+    <h2>Cargador de puntos</h2>
+    <p>
+      Muy pronto tu profesor va a poder acreditarte átomos desde acá.
+      Mientras tanto, ¡ganá átomos completando los crucigramas!
+    </p>
+    <div class="acciones-modal">
+      <button class="btn" type="button" id="boton-cerrar-cargador">Entendido</button>
+    </div>
+  </dialog>
+
+  <script src="js/estado.js"></script>
+  <script src="js/datos.js"></script>
+  <script src="js/principal.js"></script>
+  <script src="js/tienda.js"></script>
+</body>
+</html>

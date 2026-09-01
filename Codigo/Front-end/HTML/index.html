@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Telurio: aprender química jugando. Iniciá sesión para continuar.">
+  <title>Ingresar · Telurio</title>
+
+  <link rel="icon" type="image/png" href="img/logo-telurio.png">
+
+  <!-- Tipografías del proyecto: Fredoka (títulos) + Nunito (texto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body class="cuerpo-sesion">
+
+  <!-- Mascota decorativa (Einstein), como en la maqueta -->
+  <img class="sesion-mascota" src="img/einstein.png" alt="" aria-hidden="true">
+
+  <main class="tarjeta-sesion">
+    <img class="sesion-logo" src="img/logo-telurio.png" alt="Logo de Telurio">
+    <h1>INGRESAR</h1>
+
+    <!-- =====================================================================
+         FORMULARIO DE INGRESO
+         id="formulario-sesion" → punto de conexión con POST /api/sesion
+         ================================================================== -->
+    <form id="formulario-sesion" novalidate>
+
+      <div class="campo">
+        <label for="campo-usuario">Usuario</label>
+        <input type="text" id="campo-usuario" name="usuario"
+               placeholder="ejemplo@correo.com" autocomplete="username" required>
+      </div>
+
+      <div class="campo">
+        <label for="campo-contrasena">Contraseña</label>
+        <input type="password" id="campo-contrasena" name="contrasena"
+               placeholder="••••••••" autocomplete="current-password" required>
+      </div>
+
+      <!-- Mensaje de error de validación (lo controla js/sesion.js) -->
+      <p class="mensaje-error" id="mensaje-error-sesion" role="alert"></p>
+
+      <label class="fila-recordarme" for="casilla-recordarme">
+        <input type="checkbox" id="casilla-recordarme" name="recordarme">
+        Recordarme
+      </label>
+
+      <div class="separador-sesion">INGRESAR CON:</div>
+
+      <!-- Botones de proveedores (imágenes del diseño original).
+           TODO BACKEND: enganchar Google Identity Services / MSAL acá. -->
+      <button type="button" class="boton-proveedor" id="boton-google">
+        <img src="img/boton-google.png" alt="Ingresar con mi cuenta de Google">
+      </button>
+
+      <button type="button" class="boton-proveedor" id="boton-microsoft">
+        <img src="img/boton-microsoft.png" alt="Ingresar con mi cuenta de Microsoft">
+      </button>
+
+      <button type="submit" class="btn btn-oscuro btn-entrar" id="boton-entrar">
+        ENTRAR
+      </button>
+    </form>
+  </main>
+
+  <script src="js/estado.js"></script>
+  <script src="js/sesion.js"></script>
+</body>
+</html>

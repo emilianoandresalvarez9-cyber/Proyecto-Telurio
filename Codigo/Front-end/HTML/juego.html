@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Crucigrama de química: resolvé las palabras y ganá átomos.">
+  <title>Crucigrama · Telurio</title>
+
+  <link rel="icon" type="image/png" href="img/logo-telurio.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/juego.css">
+</head>
+
+<body class="cuerpo-juego">
+
+  <!-- ======================= CABECERA DEL JUEGO ========================= -->
+  <header class="cabecera-juego">
+    <a class="btn btn-claro btn-chico" id="boton-salir" href="inicio.html">← Salir</a>
+
+    <a class="marca-cabecera" href="inicio.html">
+      <img src="img/logo-telurio.png" alt="">
+      <span>Telurio</span>
+    </a>
+
+    <div class="chip-atomos" title="Átomos acumulados">
+      <img src="img/logo-telurio.png" alt="">
+      <span class="etiqueta-atomos">Átomos acumulados:</span>
+      <strong id="valor-atomos">0</strong>
+    </div>
+  </header>
+
+  <!-- ========================= ZONA DE JUEGO ============================ -->
+  <main class="zona-juego">
+
+    <!-- Tablero + pistas -->
+    <section class="panel-crucigrama" aria-labelledby="titulo-crucigrama">
+      <h1 class="titulo-juego" id="titulo-crucigrama">CRUCIGRAMA</h1>
+
+      <div class="envoltura-tablero">
+        <!-- El tablero se genera con js/juego.js según el nivel -->
+        <div class="tablero" id="tablero" role="group" aria-label="Tablero del crucigrama"></div>
+      </div>
+
+      <div class="panel-pistas">
+        <div class="grupo-pistas">
+          <h3>Palabras horizontales</h3>
+          <ol id="pistas-horizontales"></ol>
+        </div>
+        <div class="grupo-pistas">
+          <h3>Palabras verticales</h3>
+          <ol id="pistas-verticales"></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Panel de estado: nivel, reloj, puntos y acciones -->
+    <aside class="panel-estado" aria-label="Estado de la partida">
+
+      <div class="tarjeta-estado">
+        <h2>Nivel</h2>
+        <span class="valor-estado" id="valor-nivel">1</span>
+      </div>
+
+      <div class="tarjeta-estado">
+        <h2>Tiempo restante</h2>
+        <div class="con-icono">
+          <img src="img/cronometro.png" alt="">
+          <span class="valor-estado" id="reloj">10:00</span>
+        </div>
+      </div>
+
+      <div class="tarjeta-estado">
+        <h2>Puntos acumulados</h2>
+        <span class="valor-estado" id="valor-puntos">0</span>
+      </div>
+
+      <!-- Aviso de buffo comprado en la tienda (oculto si no hay) -->
+      <p class="aviso-buffo" id="aviso-buffo" hidden></p>
+
+      <div class="acciones-juego">
+        <button class="btn" type="button" id="boton-siguiente-nivel" disabled>
+          Siguiente nivel →
+        </button>
+      </div>
+
+      <img class="mascota-juego" src="img/einstein.png" alt="">
+    </aside>
+  </main>
+
+  <!-- ===================== MODAL DE FIN DE PARTIDA ====================== -->
+  <dialog class="modal" id="modal-final">
+    <h2 id="titulo-final">¡Nivel completado!</h2>
+    <p id="texto-final"></p>
+    <div class="acciones-modal">
+      <button class="btn" type="button" id="boton-modal-siguiente">Siguiente nivel →</button>
+      <button class="btn btn-fantasma" type="button" id="boton-modal-salir">Volver al inicio</button>
+    </div>
+  </dialog>
+
+  <script src="js/estado.js"></script>
+  <script src="js/datos.js"></script>
+  <script src="js/principal.js"></script>
+  <script src="js/juego.js"></script>
+</body>
+</html>

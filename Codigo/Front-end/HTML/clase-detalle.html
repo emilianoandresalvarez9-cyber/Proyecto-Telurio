@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Semanas del bimestre para practicar.">
+  <title>Clases · Telurio</title>
+
+  <link rel="icon" type="image/png" href="img/logo-telurio.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body class="cuerpo-app">
+
+  <!-- ============================ CABECERA ============================== -->
+  <header class="cabecera">
+    <button class="boton-menu" id="boton-menu" aria-label="Abrir menú"
+            aria-controls="menu-lateral" aria-expanded="false">☰</button>
+
+    <a class="marca-cabecera" href="inicio.html">
+      <img src="img/logo-telurio.png" alt="">
+      <span>Telurio</span>
+    </a>
+
+    <div class="cabecera-derecha">
+      <div class="chip-atomos" title="Átomos acumulados">
+        <img src="img/logo-telurio.png" alt="">
+        <span class="etiqueta-atomos">Átomos acumulados:</span>
+        <strong id="valor-atomos">0</strong>
+      </div>
+
+      <div class="menu-usuario">
+        <button class="boton-usuario" id="boton-usuario"
+                aria-label="Menú del usuario" aria-expanded="false">
+          <img src="img/usuario-icono.png" alt="">
+        </button>
+        <div class="desplegable-usuario" id="desplegable-usuario">
+          <p class="nombre-usuario">Alumno</p>
+          <button type="button" id="boton-cerrar-sesion">Cerrar sesión</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="telon-menu" id="telon-menu"></div>
+
+  <!-- ========================== MENÚ LATERAL ============================ -->
+  <aside class="menu-lateral" id="menu-lateral">
+    <nav aria-label="Secciones del sitio">
+      <a class="enlace-menu" href="inicio.html">Inicio</a>
+      <a class="enlace-menu" href="anuncios.html">Anuncios</a>
+      <a class="enlace-menu" href="tabla.html">Tabla</a>
+      <a class="enlace-menu" href="foro.html">Foro</a>
+      <a class="enlace-menu" href="clase.html" aria-current="page">Clase</a>
+      <a class="enlace-menu" href="tienda.html">Tienda</a>
+    </nav>
+    <div class="pie-menu">
+      <img src="img/libros-telurio.png" alt="">
+    </div>
+  </aside>
+
+  <!-- =========================== CONTENIDO ============================== -->
+  <main class="contenido">
+
+    <!-- Encabezado del curso (lo completa js/clase-detalle.js según ?curso=) -->
+    <section class="cinta-seccion">
+      <div>
+        <h1 id="nombre-curso">Química</h1>
+        <p id="profesor-curso">Profesor</p>
+      </div>
+      <img class="mascota-cinta" src="img/einstein.png" alt="">
+    </section>
+
+    <a class="btn btn-fantasma btn-chico" id="boton-volver" href="clase.html">← Volver</a>
+
+    <section aria-labelledby="titulo-bimestre" style="margin-top: 1.4rem;">
+      <h2 id="titulo-bimestre">Clases · Primer bimestre</h2>
+
+      <!-- Rejilla de semanas (la pinta js/clase-detalle.js).
+           TODO BACKEND: GET /api/cursos/{id}/semanas -->
+      <div class="rejilla-semanas" id="rejilla-semanas"></div>
+    </section>
+
+  </main>
+
+  <script src="js/estado.js"></script>
+  <script src="js/datos.js"></script>
+  <script src="js/principal.js"></script>
+  <script src="js/clase-detalle.js"></script>
+</body>
+</html>
