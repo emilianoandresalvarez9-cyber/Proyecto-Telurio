@@ -1,0 +1,1084 @@
+/* ============================================================================
+   TELURIO — Hoja de estilos global
+   ----------------------------------------------------------------------------
+   Colorimetría clave del proyecto (definida en el diseño original):
+     - Verde oscuro : #006969
+     - Verde claro  : #16AE84  (degradado con el anterior)
+   Tipografías: "Fredoka" (títulos, redondeada como el mockup) + "Nunito" (texto).
+   Metodología: variables CSS + componentes reutilizables + mobile-first.
+   ========================================================================== */
+
+/* ----------------------------- Variables ---------------------------------- */
+:root {
+  /* Paleta */
+  --c-verde-oscuro: #006969;
+  --c-verde-medio:  #0b8a78;
+  --c-verde-claro:  #16ae84;
+  --c-turquesa:     #19d3c5;
+  --c-menta:        #d9f2ea;
+  --c-crema:        #f3f8f6;
+  --c-blanco:       #ffffff;
+  --c-tinta:        #10312e;   /* texto principal */
+  --c-tinta-suave:  #4f6a66;   /* texto secundario */
+  --c-dorado:       #f2b705;
+  --c-violeta:      #7b4fd1;
+  --c-naranja:      #e2574c;
+  --c-peligro:      #d64545;
+
+  /* Degradados */
+  --deg-marca:   linear-gradient(135deg, var(--c-verde-oscuro) 0%, var(--c-verde-claro) 100%);
+  --deg-boton:   linear-gradient(135deg, #0e9c8c 0%, var(--c-turquesa) 100%);
+  --deg-tarjeta: linear-gradient(160deg, #067a6d 0%, #12a381 100%);
+
+  /* Superficies y profundidad */
+  --radio-s: 10px;
+  --radio-m: 14px;
+  --radio-l: 22px;
+  --sombra-1: 0 2px 6px rgba(6, 60, 55, 0.10);
+  --sombra-2: 0 8px 22px rgba(6, 60, 55, 0.16);
+  --sombra-3: 0 14px 34px rgba(6, 60, 55, 0.22);
+
+  /* Tipografía */
+  --f-titulos: "Fredoka", "Trebuchet MS", system-ui, sans-serif;
+  --f-texto:   "Nunito", "Segoe UI", system-ui, sans-serif;
+
+  /* Dimensiones de la maqueta */
+  --alto-cabecera: 64px;
+  --ancho-menu: 240px;
+
+  --transicion: 180ms ease;
+}
+
+/* ----------------------------- Reset básico -------------------------------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--f-texto);
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--c-tinta);
+  background-color: var(--c-crema);
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+h1, h2, h3, h4 {
+  font-family: var(--f-titulos);
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0 0 0.5em;
+  color: var(--c-verde-oscuro);
+}
+
+p { margin: 0 0 1em; }
+
+a { color: var(--c-verde-medio); }
+
+button { font-family: inherit; cursor: pointer; }
+
+input, select, textarea { font-family: inherit; font-size: 1rem; }
+
+/* Accesibilidad: foco visible con teclado */
+:focus-visible {
+  outline: 3px solid var(--c-turquesa);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Accesibilidad: respetar la preferencia de menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Utilidad para lectores de pantalla */
+.solo-lectores {
+  position: absolute;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap; border: 0;
+}
+
+/* ============================================================================
+   1. BOTONES REUTILIZABLES
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.4rem;
+  border: none;
+  border-radius: var(--radio-m);
+  font-family: var(--f-titulos);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: var(--c-blanco);
+  background: var(--deg-boton);
+  box-shadow: var(--sombra-1);
+  transition: transform var(--transicion), box-shadow var(--transicion), filter var(--transicion);
+}
+
+.btn:hover  { transform: translateY(-2px); box-shadow: var(--sombra-2); filter: brightness(1.05); }
+.btn:active { transform: translateY(0);    box-shadow: var(--sombra-1); }
+.btn:disabled {
+  cursor: not-allowed;
+  filter: grayscale(0.6) opacity(0.6);
+  transform: none;
+}
+
+/* Variante oscura (sobre fondos claros) */
+.btn-oscuro { background: var(--deg-marca); }
+
+/* Variante fantasma (bordeada, para acciones secundarias) */
+.btn-fantasma {
+  background: transparent;
+  color: var(--c-verde-oscuro);
+  border: 2px solid var(--c-verde-claro);
+  box-shadow: none;
+}
+.btn-fantasma:hover { background: var(--c-menta); filter: none; }
+
+/* Variante clara (sobre fondos verdes) */
+.btn-claro {
+  background: var(--c-blanco);
+  color: var(--c-verde-oscuro);
+}
+
+/* Botón pequeño */
+.btn-chico { padding: 0.4rem 1rem; font-size: 0.9rem; border-radius: var(--radio-s); }
+
+/* ============================================================================
+   2. PÁGINA DE INICIO DE SESIÓN (index.html)
+   ========================================================================== */
+.cuerpo-sesion {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+
+  /* Fondo con el patrón científico del diseño + velo degradado de marca */
+  background-image:
+    linear-gradient(150deg, rgba(0, 105, 105, 0.55), rgba(22, 174, 132, 0.45)),
+    url("../img/fondo-patron.png");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Einstein decorativo, anclado abajo a la izquierda como en la maqueta */
+.sesion-mascota {
+  position: absolute;
+  left: clamp(0.5rem, 4vw, 4rem);
+  bottom: 0;
+  width: clamp(120px, 18vw, 230px);
+  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.28));
+  pointer-events: none;
+  user-select: none;
+}
+
+.tarjeta-sesion {
+  width: min(420px, 100%);
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: var(--radio-l);
+  box-shadow: var(--sombra-3);
+  padding: 2rem 2.2rem 2.4rem;
+  text-align: center;
+  backdrop-filter: blur(3px);
+}
+
+.sesion-logo {
+  width: 84px;
+  margin: 0 auto 0.6rem;
+}
+
+.tarjeta-sesion h1 {
+  font-size: 1.9rem;
+  letter-spacing: 0.12em;
+  margin-bottom: 1.2rem;
+}
+
+.campo {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.campo label {
+  display: block;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--c-verde-oscuro);
+  margin-bottom: 0.3rem;
+}
+
+.campo input {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  border: 2px solid #cfe5de;
+  border-radius: var(--radio-s);
+  background: #fbfefd;
+  transition: border-color var(--transicion), box-shadow var(--transicion);
+}
+
+.campo input:focus {
+  outline: none;
+  border-color: var(--c-verde-claro);
+  box-shadow: 0 0 0 4px rgba(22, 174, 132, 0.18);
+}
+
+/* Mensaje de error de validación del formulario */
+.mensaje-error {
+  display: none;
+  margin: 0 0 0.8rem;
+  padding: 0.55rem 0.8rem;
+  border-radius: var(--radio-s);
+  background: #fdecec;
+  color: var(--c-peligro);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-align: left;
+}
+.mensaje-error.visible { display: block; }
+
+.fila-recordarme {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.1rem;
+  font-size: 0.92rem;
+  color: var(--c-tinta-suave);
+}
+
+.fila-recordarme input { width: 1.05rem; height: 1.05rem; accent-color: var(--c-verde-claro); }
+
+/* Separador "INGRESAR CON:" */
+.separador-sesion {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 1.3rem 0 0.9rem;
+  color: var(--c-tinta-suave);
+  font-family: var(--f-titulos);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+}
+.separador-sesion::before,
+.separador-sesion::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background: #d8e9e3;
+  border-radius: 2px;
+}
+
+/* Botones de proveedores externos (usan las imágenes del diseño original) */
+.boton-proveedor {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 0.7rem;
+  border: 1px solid #e2ecea;
+  border-radius: var(--radio-s);
+  background: var(--c-blanco);
+  overflow: hidden;
+  box-shadow: var(--sombra-1);
+  transition: transform var(--transicion), box-shadow var(--transicion);
+}
+.boton-proveedor:hover { transform: translateY(-2px); box-shadow: var(--sombra-2); }
+.boton-proveedor img { width: 100%; height: auto; }
+
+.btn-entrar {
+  width: 100%;
+  margin-top: 0.9rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.14em;
+}
+
+/* ============================================================================
+   3. ESQUELETO DE LA APLICACIÓN (páginas internas)
+   ----------------------------------------------------------------------------
+   Rejilla: cabecera arriba, menú lateral a la izquierda y contenido principal.
+   En pantallas chicas el menú se vuelve un panel deslizante (off-canvas).
+   ========================================================================== */
+.cuerpo-app {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: var(--alto-cabecera) 1fr;
+  grid-template-columns: var(--ancho-menu) 1fr;
+  grid-template-areas:
+    "cabecera cabecera"
+    "menu     contenido";
+}
+
+/* ------------------------------ Cabecera ---------------------------------- */
+.cabecera {
+  grid-area: cabecera;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0 1rem;
+  background: var(--deg-marca);
+  color: var(--c-blanco);
+  box-shadow: var(--sombra-2);
+}
+
+.boton-menu {
+  display: none; /* visible solo en móvil */
+  width: 42px; height: 42px;
+  border: none;
+  border-radius: var(--radio-s);
+  background: rgba(255, 255, 255, 0.14);
+  color: var(--c-blanco);
+  font-size: 1.4rem;
+  line-height: 1;
+}
+.boton-menu:hover { background: rgba(255, 255, 255, 0.25); }
+
+.marca-cabecera {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  color: var(--c-blanco);
+}
+
+.marca-cabecera img {
+  width: 38px; height: 38px;
+  /* El logo original es negro sobre transparente: se invierte para verse blanco */
+  filter: invert(1);
+}
+
+.marca-cabecera span {
+  font-family: var(--f-titulos);
+  font-size: 1.3rem;
+  letter-spacing: 0.05em;
+}
+
+.cabecera-derecha {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+/* Contador de átomos (moneda del juego) */
+.chip-atomos {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  font-family: var(--f-titulos);
+  font-size: 1rem;
+}
+
+.chip-atomos img { width: 24px; height: 24px; filter: invert(1); }
+
+.chip-atomos strong { font-size: 1.15rem; }
+
+.etiqueta-atomos { display: inline; font-size: 0.85rem; opacity: 0.9; }
+
+/* Menú del usuario (avatar + desplegable) */
+.menu-usuario { position: relative; }
+
+.boton-usuario {
+  width: 42px; height: 42px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: var(--c-blanco);
+  overflow: hidden;
+  box-shadow: var(--sombra-1);
+  transition: transform var(--transicion);
+}
+.boton-usuario:hover { transform: scale(1.06); }
+.boton-usuario img { width: 100%; height: 100%; object-fit: contain; padding: 4px; }
+
+.desplegable-usuario {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 10px);
+  min-width: 200px;
+  background: var(--c-blanco);
+  color: var(--c-tinta);
+  border-radius: var(--radio-m);
+  box-shadow: var(--sombra-3);
+  padding: 0.5rem;
+  display: none;
+}
+.desplegable-usuario.abierto { display: block; }
+
+.desplegable-usuario .nombre-usuario {
+  padding: 0.5rem 0.7rem;
+  font-weight: 800;
+  color: var(--c-verde-oscuro);
+  border-bottom: 1px solid #e7f1ee;
+  margin-bottom: 0.3rem;
+}
+
+.desplegable-usuario button {
+  width: 100%;
+  text-align: left;
+  padding: 0.55rem 0.7rem;
+  border: none;
+  border-radius: var(--radio-s);
+  background: transparent;
+  font-size: 0.95rem;
+  transition: background var(--transicion);
+}
+.desplegable-usuario button:hover { background: var(--c-menta); }
+
+/* ----------------------------- Menú lateral -------------------------------- */
+.menu-lateral {
+  grid-area: menu;
+  background: linear-gradient(180deg, #055f5b 0%, var(--c-verde-oscuro) 100%);
+  color: var(--c-blanco);
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem 0.9rem;
+  gap: 0.35rem;
+}
+
+.menu-lateral nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.enlace-menu {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.7rem 1rem;
+  border-radius: var(--radio-m);
+  color: rgba(255, 255, 255, 0.88);
+  text-decoration: none;
+  font-family: var(--f-titulos);
+  font-size: 1.02rem;
+  letter-spacing: 0.03em;
+  transition: background var(--transicion), transform var(--transicion), color var(--transicion);
+}
+
+.enlace-menu:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--c-blanco);
+  transform: translateX(4px);
+}
+
+/* Estado activo: se marca con aria-current="page" en el HTML de cada página */
+.enlace-menu[aria-current="page"] {
+  background: var(--deg-boton);
+  color: var(--c-blanco);
+  box-shadow: var(--sombra-1);
+}
+
+
+/* Imagen decorativa de libros + matraz al pie del menú (como en la maqueta) */
+.pie-menu {
+  margin-top: auto;
+  padding-top: 1.2rem;
+  display: flex;
+  justify-content: center;
+}
+.pie-menu img { width: 130px; opacity: 0.95; }
+
+/* Telón oscuro detrás del menú en móvil */
+.telon-menu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 40, 37, 0.5);
+  z-index: 45;
+}
+.telon-menu.visible { display: block; }
+
+/* ------------------------------ Contenido ---------------------------------- */
+.contenido {
+  grid-area: contenido;
+  padding: clamp(1rem, 3vw, 2.2rem);
+  max-width: 1200px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+/* Cinta de título de sección (franja verde con degradado, como el mockup) */
+.cinta-seccion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: var(--deg-tarjeta);
+  color: var(--c-blanco);
+  border-radius: var(--radio-l);
+  padding: 1.1rem 1.5rem;
+  box-shadow: var(--sombra-2);
+  margin-bottom: 1.6rem;
+}
+
+.cinta-seccion h1 {
+  color: var(--c-blanco);
+  font-size: clamp(1.3rem, 2.6vw, 1.8rem);
+  margin: 0;
+}
+
+.cinta-seccion p { margin: 0.15rem 0 0; opacity: 0.92; font-size: 0.95rem; }
+
+.cinta-seccion img.mascota-cinta {
+  width: clamp(64px, 8vw, 96px);
+  flex-shrink: 0;
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.25));
+}
+
+/* Tarjeta genérica */
+.tarjeta {
+  background: var(--c-blanco);
+  border-radius: var(--radio-m);
+  box-shadow: var(--sombra-1);
+  padding: 1.3rem 1.5rem;
+  transition: transform var(--transicion), box-shadow var(--transicion);
+}
+
+.tarjeta-interactiva:hover { transform: translateY(-3px); box-shadow: var(--sombra-2); }
+
+/* ============================================================================
+   4. INICIO / PANEL DEL ALUMNO (inicio.html)
+   ========================================================================== */
+.rejilla-progreso {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.tarjeta-metrica {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: var(--deg-tarjeta);
+  color: var(--c-blanco);
+  border-radius: var(--radio-m);
+  padding: 1.2rem 1.4rem;
+  box-shadow: var(--sombra-2);
+}
+
+.tarjeta-metrica h3 { color: var(--c-blanco); margin: 0; font-size: 1.02rem; }
+
+.tarjeta-metrica .valor-metrica {
+  font-family: var(--f-titulos);
+  font-size: 2.6rem;
+  font-weight: 700;
+  background: var(--c-blanco);
+  color: var(--c-verde-oscuro);
+  border-radius: var(--radio-s);
+  min-width: 68px;
+  text-align: center;
+  padding: 0.15rem 0.6rem;
+  box-shadow: var(--sombra-1);
+}
+
+/* Actividades pendientes */
+.rejilla-actividades {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.1rem;
+}
+
+.tarjeta-actividad {
+  background: var(--c-blanco);
+  border-radius: var(--radio-m);
+  box-shadow: var(--sombra-1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: transform var(--transicion), box-shadow var(--transicion);
+}
+.tarjeta-actividad:hover { transform: translateY(-4px); box-shadow: var(--sombra-2); }
+
+.tarjeta-actividad .cabeza-actividad {
+  background: var(--deg-marca);
+  color: var(--c-blanco);
+  font-family: var(--f-titulos);
+  padding: 0.55rem 0.5rem;
+  font-size: 1rem;
+}
+
+.tarjeta-actividad .cuerpo-actividad {
+  padding: 1rem 0.8rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  flex: 1;
+}
+
+.tarjeta-actividad .cuerpo-actividad img { width: 56px; height: 56px; object-fit: contain; }
+
+.tarjeta-actividad .semana-actividad {
+  font-weight: 800;
+  color: var(--c-tinta-suave);
+  font-size: 0.92rem;
+}
+
+/* Estado bloqueado: se atenúa y no permite jugar */
+.tarjeta-actividad.bloqueada { filter: grayscale(0.45); opacity: 0.75; }
+.tarjeta-actividad.bloqueada:hover { transform: none; box-shadow: var(--sombra-1); }
+
+/* ============================================================================
+   5. ANUNCIOS (anuncios.html)
+   ========================================================================== */
+.rejilla-anuncios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.3rem;
+}
+
+.tarjeta-anuncio {
+  background: var(--c-blanco);
+  border-radius: var(--radio-m);
+  box-shadow: var(--sombra-1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transicion), box-shadow var(--transicion);
+}
+.tarjeta-anuncio:hover { transform: translateY(-4px); box-shadow: var(--sombra-2); }
+
+.tarjeta-anuncio .cabeza-anuncio {
+  background: var(--deg-marca);
+  color: var(--c-blanco);
+  font-family: var(--f-titulos);
+  text-align: center;
+  padding: 0.6rem;
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+}
+
+.tarjeta-anuncio .cuerpo-anuncio {
+  padding: 1.2rem 1.3rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  flex: 1;
+}
+
+.tarjeta-anuncio h3 { font-size: 1.15rem; margin: 0; }
+
+.tarjeta-anuncio .fecha-anuncio {
+  font-size: 0.8rem;
+  color: var(--c-tinta-suave);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.tarjeta-anuncio img.imagen-anuncio {
+  width: 96px;
+  align-self: center;
+}
+
+/* Insignia circular tipo "PASAPALABRAS" */
+.insignia-rosco {
+  align-self: center;
+  width: 96px; height: 96px;
+  border-radius: 50%;
+  background: var(--deg-marca);
+  color: var(--c-blanco);
+  display: grid;
+  place-items: center;
+  font-family: var(--f-titulos);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-align: center;
+  box-shadow: var(--sombra-2);
+  border: 4px solid var(--c-dorado);
+}
+
+/* ============================================================================
+   6. TABLA DE COMPETICIÓN (tabla.html)
+   ========================================================================== */
+.lista-ranking {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.fila-ranking {
+  display: grid;
+  grid-template-columns: 44px 44px 1fr auto auto;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.55rem 1rem;
+  border-radius: var(--radio-m);
+  background: var(--deg-tarjeta);
+  color: var(--c-blanco);
+  box-shadow: var(--sombra-1);
+  transition: transform var(--transicion), box-shadow var(--transicion);
+}
+.fila-ranking:hover { transform: translateX(6px); box-shadow: var(--sombra-2); }
+
+/* Colores de podio, siguiendo la maqueta (oro / violeta / naranja) */
+.fila-ranking.puesto-1 { background: linear-gradient(135deg, #d99a05, var(--c-dorado)); }
+.fila-ranking.puesto-2 { background: linear-gradient(135deg, #5b34ad, var(--c-violeta)); }
+.fila-ranking.puesto-3 { background: linear-gradient(135deg, #b23a31, var(--c-naranja)); }
+
+/* Resalta al usuario con sesión iniciada */
+.fila-ranking.es-usuario { outline: 3px solid var(--c-blanco); outline-offset: -3px; }
+
+.numero-ranking {
+  font-family: var(--f-titulos);
+  font-size: 1.3rem;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.22);
+  border-radius: var(--radio-s);
+  text-align: center;
+  padding: 0.15rem 0;
+}
+
+.avatar-ranking {
+  width: 40px; height: 40px;
+  background: var(--c-blanco);
+  border-radius: 50%;
+  padding: 4px;
+  object-fit: contain;
+}
+
+.nombre-ranking { font-family: var(--f-titulos); font-size: 1.05rem; }
+
+.multiplicador-ranking {
+  font-weight: 800;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--c-verde-oscuro);
+  border-radius: 999px;
+  padding: 0.1rem 0.7rem;
+  font-size: 0.9rem;
+}
+
+.puntos-ranking { font-family: var(--f-titulos); font-size: 1.05rem; }
+
+/* Encabezado de la tabla con estrella y mascota */
+.cabeza-tabla {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.estrella-tabla { font-size: 2rem; filter: drop-shadow(0 3px 4px rgba(0,0,0,0.25)); }
+
+/* ============================================================================
+   7. FORO (foro.html)
+   ========================================================================== */
+.cabeza-foro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.tabla-foro { width: 100%; border-collapse: separate; border-spacing: 0 0.6rem; }
+
+.tabla-foro th {
+  text-align: left;
+  font-family: var(--f-titulos);
+  color: var(--c-verde-oscuro);
+  padding: 0 1rem;
+  font-size: 0.95rem;
+}
+
+.tabla-foro td {
+  background: var(--c-blanco);
+  padding: 0.9rem 1rem;
+  vertical-align: middle;
+  box-shadow: var(--sombra-1);
+}
+
+.tabla-foro tr td:first-child  { border-radius: var(--radio-m) 0 0 var(--radio-m); }
+.tabla-foro tr td:last-child   { border-radius: 0 var(--radio-m) var(--radio-m) 0; }
+
+.titulo-tema { font-weight: 800; color: var(--c-verde-oscuro); }
+.detalle-tema { font-size: 0.88rem; color: var(--c-tinta-suave); margin: 0.15rem 0 0; }
+
+.contador-respuestas {
+  display: inline-grid;
+  place-items: center;
+  min-width: 44px;
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  background: var(--deg-boton);
+  color: var(--c-blanco);
+  font-family: var(--f-titulos);
+  font-weight: 700;
+}
+
+/* Formulario de nuevo tema (se muestra/oculta con JS) */
+.formulario-tema { display: none; margin-bottom: 1.4rem; }
+.formulario-tema.visible { display: block; }
+
+.formulario-tema textarea {
+  width: 100%;
+  min-height: 90px;
+  resize: vertical;
+  padding: 0.7rem 0.9rem;
+  border: 2px solid #cfe5de;
+  border-radius: var(--radio-s);
+}
+.formulario-tema textarea:focus,
+.formulario-tema input:focus {
+  outline: none;
+  border-color: var(--c-verde-claro);
+  box-shadow: 0 0 0 4px rgba(22, 174, 132, 0.18);
+}
+.formulario-tema input {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  border: 2px solid #cfe5de;
+  border-radius: var(--radio-s);
+}
+.acciones-formulario { display: flex; gap: 0.7rem; margin-top: 0.8rem; flex-wrap: wrap; }
+
+/* ============================================================================
+   8. CLASE — selector y detalle (clase.html / clase-detalle.html)
+   ========================================================================== */
+.bloque-curso {
+  margin-bottom: 1.6rem;
+}
+
+.bloque-curso h2 { font-size: 1.2rem; }
+
+.tarjeta-curso {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: var(--deg-tarjeta);
+  color: var(--c-blanco);
+  border-radius: var(--radio-m);
+  padding: 1.1rem 1.4rem;
+  box-shadow: var(--sombra-2);
+}
+
+.tarjeta-curso h3 { color: var(--c-blanco); margin: 0; font-size: 1.15rem; }
+.tarjeta-curso p  { margin: 0.15rem 0 0; opacity: 0.9; }
+
+/* Rejilla de semanas del bimestre */
+.rejilla-semanas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1.1rem;
+}
+
+.tarjeta-semana {
+  background: var(--deg-tarjeta);
+  color: var(--c-blanco);
+  border-radius: var(--radio-m);
+  box-shadow: var(--sombra-1);
+  padding: 1.1rem 0.9rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  text-align: center;
+  transition: transform var(--transicion), box-shadow var(--transicion);
+}
+.tarjeta-semana:hover { transform: translateY(-4px); box-shadow: var(--sombra-2); }
+
+.tarjeta-semana h3 { color: var(--c-blanco); margin: 0; font-size: 1.1rem; text-transform: lowercase; }
+
+.tarjeta-semana.bloqueada { filter: grayscale(0.5); opacity: 0.72; }
+.tarjeta-semana.bloqueada:hover { transform: none; }
+.tarjeta-semana img.icono-candado { width: 40px; height: 40px; object-fit: contain; }
+
+/* ============================================================================
+   9. TIENDA (tienda.html)
+   ========================================================================== */
+.rejilla-tienda {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.2rem;
+}
+
+.tarjeta-producto {
+  background: var(--c-blanco);
+  border-radius: var(--radio-m);
+  box-shadow: var(--sombra-1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: transform var(--transicion), box-shadow var(--transicion);
+}
+.tarjeta-producto:hover { transform: translateY(-4px); box-shadow: var(--sombra-2); }
+
+.tarjeta-producto .cabeza-producto {
+  background: var(--deg-marca);
+  color: var(--c-blanco);
+  font-family: var(--f-titulos);
+  padding: 0.55rem 0.6rem;
+  font-size: 0.98rem;
+}
+
+.tarjeta-producto .cuerpo-producto {
+  padding: 1rem 0.9rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.65rem;
+  flex: 1;
+}
+
+.tarjeta-producto .icono-producto { width: 52px; height: 52px; object-fit: contain; }
+
+.valor-buffo {
+  font-family: var(--f-titulos);
+  font-size: 1.6rem;
+  color: var(--c-verde-oscuro);
+}
+
+.precio-producto {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 800;
+  color: var(--c-verde-oscuro);
+}
+.precio-producto img { width: 20px; height: 20px; }
+
+.tarjeta-producto .comprado {
+  font-weight: 800;
+  color: var(--c-verde-claro);
+}
+
+.titulo-grupo-tienda {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 1.8rem 0 1rem;
+}
+.titulo-grupo-tienda h2 { margin: 0; }
+.titulo-grupo-tienda::after {
+  content: "";
+  flex: 1;
+  height: 3px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--c-verde-claro), transparent);
+}
+
+/* ============================================================================
+   10. VENTANA MODAL GENÉRICA (avisos, confirmaciones)
+   ========================================================================== */
+.modal {
+  border: none;
+  border-radius: var(--radio-l);
+  box-shadow: var(--sombra-3);
+  padding: 1.8rem 2rem;
+  max-width: min(440px, 92vw);
+  text-align: center;
+}
+.modal::backdrop { background: rgba(4, 40, 37, 0.55); }
+.modal h2 { margin-top: 0; }
+.modal .acciones-modal {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: 1.2rem;
+  flex-wrap: wrap;
+}
+
+/* Notificación flotante (compras, puntos ganados, etc.) */
+.aviso-flotante {
+  position: fixed;
+  left: 50%;
+  bottom: 1.6rem;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--c-verde-oscuro);
+  color: var(--c-blanco);
+  padding: 0.75rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 700;
+  box-shadow: var(--sombra-3);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms ease, transform 250ms ease;
+  z-index: 90;
+}
+.aviso-flotante.visible { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+/* ============================================================================
+   11. RESPONSIVE
+   ========================================================================== */
+
+/* Tabletas y menores: el menú lateral pasa a panel deslizante */
+@media (max-width: 900px) {
+  .cuerpo-app {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "cabecera"
+      "contenido";
+  }
+
+  .boton-menu { display: inline-grid; place-items: center; }
+
+  .menu-lateral {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: min(280px, 82vw);
+    z-index: 50;
+    padding-top: 1.4rem;
+    transform: translateX(-100%);
+    transition: transform 250ms ease;
+    box-shadow: var(--sombra-3);
+  }
+  .menu-lateral.abierto { transform: translateX(0); }
+
+  .etiqueta-atomos { display: none; } /* el chip queda compacto: ⚛ + número */
+}
+
+/* Teléfonos */
+@media (max-width: 560px) {
+  .cinta-seccion { flex-direction: column; text-align: center; }
+  .cinta-seccion img.mascota-cinta { order: -1; }
+
+  .fila-ranking {
+    grid-template-columns: 36px 36px 1fr auto;
+    gap: 0.5rem;
+    padding: 0.5rem 0.7rem;
+  }
+  /* En móvil el multiplicador pasa debajo del nombre */
+  .multiplicador-ranking { grid-column: 3; justify-self: start; font-size: 0.8rem; }
+  .puntos-ranking { grid-column: 4; grid-row: 1; font-size: 0.95rem; }
+  .nombre-ranking { font-size: 0.95rem; }
+
+  .tabla-foro thead { display: none; }
+  .tabla-foro, .tabla-foro tbody, .tabla-foro tr, .tabla-foro td { display: block; width: 100%; }
+  .tabla-foro tr { margin-bottom: 0.8rem; }
+  .tabla-foro tr td:first-child { border-radius: var(--radio-m) var(--radio-m) 0 0; }
+  .tabla-foro tr td:last-child  { border-radius: 0 0 var(--radio-m) var(--radio-m); }
+  .tabla-foro td { box-shadow: none; }
+  .tabla-foro tr { box-shadow: var(--sombra-1); border-radius: var(--radio-m); overflow: hidden; }
+
+  .sesion-mascota { display: none; } /* evita tapar el formulario en pantallas chicas */
+  .tarjeta-sesion { padding: 1.6rem 1.4rem 1.8rem; }
+}

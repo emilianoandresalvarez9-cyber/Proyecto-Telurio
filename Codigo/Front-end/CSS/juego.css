@@ -1,0 +1,257 @@
+/* ============================================================================
+   TELURIO — Estilos del juego "Crucigrama" (juego.html)
+   Depende de las variables definidas en estilos.css
+   ========================================================================== */
+
+.cuerpo-juego {
+  min-height: 100vh;
+  background-image:
+    linear-gradient(150deg, rgba(0, 105, 105, 0.62), rgba(22, 174, 132, 0.5)),
+    url("../img/fondo-patron.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Barra superior del juego */
+.cabecera-juego {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.7rem 1rem;
+  background: var(--deg-marca);
+  color: var(--c-blanco);
+  box-shadow: var(--sombra-2);
+  position: sticky;
+  top: 0;
+  z-index: 30;
+}
+
+.cabecera-juego .chip-atomos { margin-left: auto; }
+
+/* Disposición principal: tablero + panel lateral de estado */
+.zona-juego {
+  flex: 1;
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: clamp(1rem, 3vw, 2rem);
+  display: grid;
+  grid-template-columns: 1fr 250px;
+  gap: 1.4rem;
+  align-items: start;
+}
+
+/* Panel central con el crucigrama */
+.panel-crucigrama {
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: var(--radio-l);
+  box-shadow: var(--sombra-3);
+  padding: clamp(1rem, 3vw, 1.8rem);
+}
+
+.titulo-juego {
+  text-align: center;
+  letter-spacing: 0.16em;
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  margin-bottom: 1.2rem;
+}
+
+/* Contenedor con desplazamiento horizontal por si el tablero excede el ancho */
+.envoltura-tablero {
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* El tablero se genera por JS como una rejilla de celdas */
+.tablero {
+  display: grid;
+  gap: 3px;
+  /* --columnas y --filas se asignan desde JS según el nivel */
+  grid-template-columns: repeat(var(--columnas), var(--lado-celda));
+  grid-template-rows: repeat(var(--filas), var(--lado-celda));
+  --lado-celda: clamp(30px, 5.4vw, 46px);
+}
+
+.celda {
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Celda vacía (no forma parte de ninguna palabra) */
+.celda.vacia { background: transparent; }
+
+/* Celda jugable */
+.celda input {
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--c-verde-oscuro);
+  border-radius: 6px;
+  background: var(--c-blanco);
+  text-align: center;
+  font-family: var(--f-titulos);
+  font-size: clamp(0.95rem, 2.4vw, 1.25rem);
+  font-weight: 600;
+  color: var(--c-verde-oscuro);
+  text-transform: uppercase;
+  caret-color: var(--c-verde-claro);
+  transition: background var(--transicion), border-color var(--transicion), transform var(--transicion);
+}
+
+.celda input:focus {
+  outline: none;
+  border-color: var(--c-turquesa);
+  background: var(--c-menta);
+  transform: scale(1.06);
+  z-index: 2;
+}
+
+/* Estados de validación */
+.celda input.correcta {
+  background: var(--c-verde-claro);
+  border-color: var(--c-verde-oscuro);
+  color: var(--c-blanco);
+}
+.celda input.incorrecta {
+  background: #fdecec;
+  border-color: var(--c-peligro);
+  color: var(--c-peligro);
+}
+
+/* Numerito de referencia de cada palabra */
+.numero-celda {
+  position: absolute;
+  top: 1px;
+  left: 4px;
+  font-size: 0.62rem;
+  font-weight: 800;
+  color: var(--c-verde-oscuro);
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Panel inferior con las pistas */
+.panel-pistas {
+  margin-top: 1.4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.grupo-pistas {
+  background: var(--deg-marca);
+  color: var(--c-blanco);
+  border-radius: var(--radio-m);
+  padding: 1rem 1.2rem;
+  box-shadow: var(--sombra-1);
+}
+
+.grupo-pistas h3 {
+  color: var(--c-blanco);
+  font-size: 1.02rem;
+  margin-bottom: 0.6rem;
+  text-align: center;
+}
+
+.grupo-pistas ol { margin: 0; padding-left: 1.4rem; font-size: 0.92rem; }
+.grupo-pistas li { margin-bottom: 0.45rem; }
+.grupo-pistas li::marker { font-weight: 800; }
+
+/* Pista resuelta: se tacha */
+.grupo-pistas li.resuelta { text-decoration: line-through; opacity: 0.65; }
+
+/* Columna derecha: nivel, tiempo, puntos y acciones */
+.panel-estado {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: sticky;
+  top: calc(var(--alto-cabecera) + 1rem);
+}
+
+.tarjeta-estado {
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: var(--radio-m);
+  box-shadow: var(--sombra-2);
+  padding: 0.9rem 1.1rem;
+  text-align: center;
+}
+
+.tarjeta-estado h2 {
+  font-size: 0.95rem;
+  margin-bottom: 0.35rem;
+  color: var(--c-tinta-suave);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.tarjeta-estado .valor-estado {
+  font-family: var(--f-titulos);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--c-verde-oscuro);
+}
+
+/* Reloj: cambia de color cuando queda poco tiempo */
+#reloj.advertencia { color: var(--c-naranja); }
+#reloj.critico     { color: var(--c-peligro); animation: pulso 1s infinite; }
+
+@keyframes pulso {
+  50% { transform: scale(1.08); }
+}
+
+.tarjeta-estado .con-icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.tarjeta-estado .con-icono img { width: 30px; height: 30px; }
+
+/* Aviso de buffo activo */
+.aviso-buffo {
+  background: var(--c-dorado);
+  color: #5c4500;
+  border-radius: var(--radio-m);
+  padding: 0.6rem 0.9rem;
+  font-weight: 800;
+  font-size: 0.88rem;
+  text-align: center;
+  box-shadow: var(--sombra-1);
+}
+
+.acciones-juego {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+/* Mascota con idea (esquina del tablero en escritorio) */
+.mascota-juego {
+  width: 110px;
+  align-self: center;
+  filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.3));
+}
+
+/* --------------------------- Responsive ------------------------------------ */
+@media (max-width: 900px) {
+  .zona-juego { grid-template-columns: 1fr; }
+
+  .panel-estado {
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    align-items: stretch;
+  }
+
+  .acciones-juego { grid-column: 1 / -1; flex-direction: row; flex-wrap: wrap; justify-content: center; }
+  .mascota-juego { display: none; }
+}
+
+@media (max-width: 480px) {
+  .tablero { --lado-celda: clamp(26px, 8.6vw, 38px); }
+  .tarjeta-estado .valor-estado { font-size: 1.5rem; }
+}
